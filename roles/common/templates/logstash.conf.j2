@@ -1,0 +1,16 @@
+input {
+  file {
+    path => "/var/log/apache2/access.log"
+    start_position => "beginning"
+  }
+}
+
+filter {
+  # Add filters to parse the Apache2 logs, e.g., grok patterns
+}
+
+output {
+  elasticsearch {
+    hosts => ["localhost:9200"]
+  }
+}

@@ -1,0 +1,11 @@
+---
+- name: Configure ELK Stack for Website Monitoring
+  hosts: elk_servers
+  become: true
+
+  roles:
+    - common
+    - elasticsearch
+    - logstash
+    - kibana
+    - apache2
